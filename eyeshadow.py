@@ -147,7 +147,7 @@ val[:,0] += (L1-L)*inten
 val[:,1] += (A1-A)*inten
 val[:,2] += (B1-bB)*inten
 
-image_blank = np.array(imread('input.jpg'))
+image_blank = img.copy();
 image_blank *= 0
 image_blank[x,y] = color.lab2rgb(val.reshape(len(x),1,3)).reshape(len(x),3)*255
 

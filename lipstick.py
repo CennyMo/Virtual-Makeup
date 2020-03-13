@@ -45,9 +45,6 @@ def getpoint(img):
                                                   shape.part(1)))
         i = 0
         for pt in shape.parts():
-            pt_pos = (pt.x, pt.y)
-            j = str(i)
-            # cv2.putText(img, j, pt_pos,  cv2.FONT_HERSHEY_SIMPLEX,0.5,(0, 255, 0), 1)
             i = i + 1
             x.append(pt.x)
             y.append(pt.y)
@@ -131,8 +128,6 @@ hsv_val2[:,1]-=0
 hsv_val2[:,2]+=0
 
 #水润：
-#hsl实验：
-
 hsv_val[x,y]=hsv_val2
 im=cv2.cvtColor(hsv_val,cv2.COLOR_HSV2BGR)
 for i in range(0,len(x)-1):
